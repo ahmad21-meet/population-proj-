@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="button.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body>
+
+    <div class="splash">
+        <h1 class = "fade-in">Welcome to my project </h1>
+    </div>
+    <div class="container">
+   
+<div id ="display">
+    <h2 id="stam"></h2>
+<button style="margin-right: 30px" onclick="Asia()" >asia</button>
+<button style="margin-right: 30px"  onclick="africa()">africa</button>
+<button style="margin-right: 30px" onclick="europe() ">europe</button>
+<button style="margin-right: 30px" onclick="america()">america</button>
+</div>
+</div>
+<div id="chart-div">
+<canvas id="myChart"></canvas>
+</div>
+<h2 id="lock"> </h2>
+<div id="buttons"> </div>
+<h1 id="lock"> </h1>
+
+<script src="index.js"></script>
+<script>
+    var stam =document.getElementById('stam');
+function Asia() {
+    displaychart("https://restcountries.com/v3.1/subregion/asia");
+   stam.innerHTML="you choose a Asia";
+}
+function europe() {
+    displaychart("https://restcountries.com/v3.1/subregion/europe");
+   stam.innerHTML="you choose a Europe";
+}
+function africa() {
+    displaychart("https://restcountries.com/v3.1/subregion/africa");
+   stam.innerHTML="you choose a Africa";
+}
+function america() {
+    displaychart("https://restcountries.com/v3.1/subregion/america");
+   stam.innerHTML="you choose a america";
+
+}
+</script>
+</div>
+</body>
+</html>
